@@ -27,6 +27,7 @@ const controller = $scope => {
         jedis.push(jedi);
       })
       $scope.jedis = jedis;
+      console.log('JEDIS >>>', $scope.jedis);
       Digest($scope);
       $scope.$emit('overlay', false);
     });

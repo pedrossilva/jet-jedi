@@ -1,0 +1,149 @@
+html, body {
+    background-color: #dbe1e6;
+}
+body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar.bg-dark {
+    background-color: rgba(52, 58, 64, 0.5)!important;
+}
+.page-title {
+    font-weight: 100;
+    margin: 0.3em 0;
+}
+.content-page {
+    padding: 15px;
+    background-color: #FFF;
+}
+.table-custom {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    color: #555;
+}
+
+.table-custom tbody tr {
+    background-color: #f8f9fa;
+}
+
+.table-custom td, .table-custom th {
+    border-top: 1px solid #dee2e6;
+    border: none;
+    vertical-align: middle;
+}
+.table-custom thead tr {
+    background-color: transparent;
+}
+.table-custom thead th {
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #717171;
+    cursor: pointer;
+}
+.table-custom thead th i.fa-sort {
+    color: #c5c5c5;
+}
+.table-custom .td-actions {
+    width: 100px;
+    text-align: right;
+}
+.dropdown button, .dropdown-menu {
+    font-size: 12px;
+}
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.overlay .sk-rotating-plane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+/* loading */
+.sk-rotating-plane {
+    width: 50px;
+    height: 50px;
+    /*background-color: #333;*/
+    margin: 50px auto;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+@keyframes sk-rotatePlane {
+    0% { transform: perspective(150px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: perspective(150px) rotateX(0deg) rotateY(-180deg); }
+    100% { transform: perspective(150px) rotateX(0deg) rotateY(-180deg); }
+}
+
+/* Charts */
+.ct-series-a .ct-slice-pie {
+    /* fill of the pie slieces */
+    fill: hsl(120, 40%, 60%);
+    /* give your pie slices some outline or separate them visually by using the background color here */
+    stroke: white;
+    /* outline width */
+    stroke-width: 4px;
+}
+
+.ct-legend {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+}
+.ct-legend li {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 3px;
+}
+
+.ct-legend li:before {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: baseline;
+    content: '';
+    border-radius: 2px;
+}
+
+.ct-legend li.inactive:before {
+    background: transparent;
+}
+
+.ct-legend.ct-legend-inside {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ct-legend .ct-series-0:before { background-color: #d70206; border-color: #d70206 }
+.ct-legend .ct-series-1:before { background-color: #f05b4f; border-color: #f05b4f }
+.ct-legend .ct-series-2:before { background-color: #f4c63d; border-color: #f4c63d }
+.ct-legend .ct-series-3:before { background-color: #d17905; border-color: #d17905 }
+.ct-legend .ct-series-4:before { background-color: #453d3f; border-color: #453d3f }
+.ct-legend .ct-series-5:before { background-color: #59922b; border-color: #59922b }
+.ct-legend .ct-series-6:before { background-color: #0544d3; border-color: #0544d3 }
+.ct-legend .ct-series-7:before { background-color: #6b0392; border-color: #6b0392 }
+.ct-legend .ct-series-8:before { background-color: #f05b4f; border-color: #f05b4f }
+.ct-legend .ct-series-9:before { background-color: #dda458; border-color: #dda458 }
+.ct-legend .ct-series-10:before { background-color: #eacf7d; border-color: #eacf7d }
+.ct-legend .ct-series-11:before { background-color: #86797d; border-color: #86797d }
+.ct-legend .ct-series-12:before { background-color: #b2c326; border-color: #b2c326 }
+.ct-legend .ct-series-13:before { background-color: #6188e2; border-color: #6188e2 }
+.ct-legend .ct-series-14:before { background-color: #a748ca; border-color: #a748ca }
+
+
+#statusJedis, #planetsJedis {
+    max-height: 300px;
+    overflow: hidden;
+}

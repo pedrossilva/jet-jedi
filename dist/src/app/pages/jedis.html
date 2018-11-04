@@ -1,0 +1,63 @@
+<div ng-controller="jedis">
+  <h1 class="page-title" ng-bind="title"></h1>
+
+  <div>
+    <a class="btn btn-sm btn-outline-secondary" href="/jedi">+ Jedi</a>
+  </div>
+
+  <table class="table table-custom">
+    <thead>
+    <tr>
+      <th scope="col" ng-click="setOrder('name')">Nome
+        <i ng-class="order | sortClass:'name'" aria-hidden="true"></i></th>
+      <th scope="col" ng-click="setOrder('planet')">Planeta
+        <i ng-class="order | sortClass:'planet'" aria-hidden="true"></i></th>
+      <th scope="col" ng-click="setOrder('status')">Status
+        <i ng-class="order | sortClass:'status'" aria-hidden="true"></i></th>
+      <th scope="col" ng-click="setOrder('master')">Mestre
+        <i ng-class="order | sortClass:'master'" aria-hidden="true"></i></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="jedi in jedis track by $index">
+      <th scope="row" ng-bind="jedi.name"></th>
+      <td ng-bind="jedi.planet"></td>
+      <td ng-bind="jediStatus[jedi.status] || jedi.status"></td>
+      <td ng-bind="jedi.master"></td>
+      <td class="td-actions">
+        <div class="dropdown" ng-if="(!edit || edit.$$hashKey != jedi.$$hashKey)">
+          <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ações
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/jedi/{{jedi.id}}">Editar</a>
+            <a class="dropdown-item" href="#" ng-click="remove(jedi)">Excluír</a>
+            <a class="dropdown-item" ng-href="{{jedi | jediUrl}}">Copiar</a>
+            <!--<a class="dropdown-item" ng-href="{[jedi | jediUrl}}">Copiar</a>-->
+          </div>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <div class="modal fade" id="modalConfirm" tabindex="-1" role="dialog" aria-labelledby="modalConfirmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          Deseja realmente remover o jedi - {{jediRemove.name}}?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+          <button type="button" class="btn btn-primary" ng-click="confirmRemove(jediRemove)">Sim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
