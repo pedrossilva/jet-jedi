@@ -30,7 +30,7 @@ export default {
             { from: './node_modules/bootstrap/dist/css/*', to: './vendor/bootstrap/', flatten: true },
             { from: './node_modules/bootstrap/dist/js/*', to: './vendor/bootstrap/', flatten: true },
             { from: './node_modules/font-awesome/css/*', to: './vendor/font-awesome/', flatten: true },
-            { from: './node_modules/font-awesome/fonts/*', to: './vendor/font-awesome/', flatten: true },
+            { from: './node_modules/font-awesome/fonts/*', to: './vendor/fonts/', flatten: true },
             { from: './node_modules/toastr/build/*', to: './vendor/toastr/', flatten: true },
             { from: './node_modules/jquery/dist/*', to: './vendor/jquery/', flatten: true },
             { from: './node_modules/jquery/dist/*', to: './vendor/jquery/', flatten: true },
