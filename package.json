@@ -4,8 +4,8 @@
   "description": "Plataforma de gestão de jedis da República.",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "node server.js",
+    "start:dev": "webpack-dev-server --history-api-fallback --inline --progress",
     "build": "webpack"
   },
   "repository": {
