@@ -4,15 +4,15 @@ Plataforma de gestão de jedis da República.
 
 baixe o projeto com:
 ```  
-    git clone git@github.com:pedrossilva/jet-jedi.git
+    git clone https://github.com/pedrossilva/jet-jedi.git
 ```
+1. Execute `npm install` para instalar as dependências.
 
-### Dist
-
-1. Execute `npm start` para iniciar o servidor web. Navegue até `http://localhost:5000`.
+### Prod
+2. Execute `npm run build` para gerar a pasta dist com os arquivos de produção.
+3. Execute `npm start` para iniciar o servidor web. Navegue até `http://localhost:5000`.
 
 ### Dev
-1. Execute `npm install` e `bower install` para instalar as dependências.
-
-2. Execute `npm start:dev` para iniciar o servidor web. Navegue até `http://localhost:3000`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+2. Execute `npm run start:dev` para iniciar o servidor web. Navegue até `http://localhost:3000`. 
+O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 

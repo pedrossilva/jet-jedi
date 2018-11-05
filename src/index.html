@@ -4,21 +4,21 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/src/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./node_modules/toastr/build/toastr.min.css">
-  <link rel="stylesheet" href="./bower_components/chartist/dist/chartist.min.css">
+  <link rel="stylesheet" href="./vendor/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="./vendor/toastr/toastr.min.css">
+  <link rel="stylesheet" href="./vendor/chartist/chartist.min.css">
 </head>
 <body ng-controller="main">
 <navbar></navbar>
 
 <div ng-view class="container"></div>
 
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/bootstrap.min.js"></script>
 <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
@@ -34,8 +34,8 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../bower_components/chartist/dist/chartist.min.js"></script>
-<script src="./node_modules/chartist-plugin-legend/chartist-plugin-legend.js"></script>
+<script src="./vendor/chartist/chartist.min.js"></script>
+<script src="./vendor/chartist-plugin-legend/chartist-plugin-legend.js"></script>
 
 <div class="overlay" ng-if="overlay">
   <div class="sk-rotating-plane">
