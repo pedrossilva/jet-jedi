@@ -147,3 +147,45 @@ body {
     max-height: 300px;
     overflow: hidden;
 }
+
+/* Small Devices, Tablets */
+/*@media only screen and (min-width : 768px) {*/
+@media only screen and (max-width : 768px) {
+    .table-custom tbody tr {
+        display: block;
+        padding: .75rem;
+        margin-bottom: 5px;
+    }
+    .table-custom thead th {
+        display: inline-block;
+    }
+    .table-custom tbody td, .table-custom tbody th {
+        vertical-align: middle;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .table-custom tbody td:last-child, .table-custom tbody th:last-child {
+        width: 100%;
+    }
+    .table-custom tbody td::before, .table-custom tbody th::before {
+        width: 5em;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 10px;
+        color: #777777;
+    }
+    .table-custom tbody tr th:nth-child(1)::before {
+        content: "Nome: ";
+    }
+    .table-custom tbody tr td:nth-child(2)::before {
+        content: "Planeta: ";
+    }
+    .table-custom tbody tr td:nth-child(3)::before {
+        content: "Status: ";
+    }
+    .table-custom tbody tr td:nth-child(4)::before {
+        content: "Mestre: ";
+    }
+}
+
