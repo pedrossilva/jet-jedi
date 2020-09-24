@@ -1,6 +1,11 @@
 # Jet Jedi
 Plataforma de gestão de jedis da República.
 
+### Publicado em:
+
+https://dashboard.heroku.com/apps/jet-jedi
+
+___ 
 
 baixe o projeto com:
 ```  
@@ -8,7 +13,7 @@ baixe o projeto com:
 ```
 1. Execute `npm install` para instalar as dependências.
 
-### Prod
+### Prod (local)
 2. Execute `npm run build` para gerar a pasta dist com os arquivos de produção.
 3. Execute `npm start` para iniciar o servidor web. Navegue até `http://localhost:5000`.
 
